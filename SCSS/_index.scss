@@ -1,0 +1,279 @@
+/* index start*/
+
+.index {
+	.introduce {
+		margin-bottom: 50px;
+		padding: 0 2%;
+		h2 {
+			text-align: center;
+			span {
+				font-size: $font-size-l;
+				color: $font-color;
+				line-height: 32px;
+				display: inline-block;
+				position: relative;
+				padding: 0 10px;
+				margin-bottom: 31px;
+				@include pad-below(){
+					margin-bottom: 0;
+				}
+				
+			}
+			::before ,::after{
+				content: '';
+				background: #979797;
+				height: 1px;
+				width: 100px;
+				position: absolute;
+				top: 50%;
+				@include pad-below(){
+					display: none;
+				}
+			}	
+			::before {
+				right: 100%;
+			}
+			::after {
+				left: 100%;
+			}
+		}
+		ul {
+			@include pad-below(){
+				padding: 0 20px;
+			}
+			li {
+				float: left;
+				display: block;
+				width: 29.3333%;
+				margin: 0 2%;
+				text-align: center;
+				color: $font-color;
+				@include pad-below(){
+					float: none;
+					text-align: center;
+					width: 100%;
+					margin: 30px 0 ;
+				}
+				img {
+					border-radius: 100px;
+					margin-bottom: 20px;
+				}
+				h3 {
+					margin-bottom: 11px;
+					font-size: $font-size-m;
+				}
+				p {
+					font-size: $font-size-s;
+					text-align: left;
+					@include iphone(){
+						display: none;
+					}
+				}
+			}
+		}
+		::after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+	}
+	.chef {
+		background: $font-color ;
+		box-sizing: border-box;
+	    overflow: auto; 
+	    color: #fff;
+	    margin-bottom: 50px;
+	    padding: 0 42px;
+	    height: 460px;
+	    @include pad(){
+	    	padding: 0 10px;
+	    }
+	    @include pad-below(){
+			height: auto;
+			padding: 0;
+	    }
+	    .img{
+			background: url(../IMGS/main_chef_brown.png);
+			background-repeat: no-repeat;
+			float: left;
+			margin-right: 25px;
+			width: 470px;
+			height: 460px;
+			@include pad(){
+				background-position: 80% center;
+				width: 373px;
+			}
+			@include pad-below(){
+		    	float: none;
+				width: 100%;
+				background-position: 100% 0;
+		    }
+		}
+		.text {
+			color: #EFE9E7;
+			width: 410px;
+			float: left;
+			margin-top: 81px;
+			@include pad(){
+				margin-top: 49px;
+				width: 330px;
+			}
+			@include pad-below(){
+		    	margin-top: 0;
+				text-align: center;
+				float: none;
+				width: 100%;
+				padding: 30px 20px;
+				box-sizing: border-box;
+		    }
+		    h2 {
+				font-size: $font-size-l;
+			}
+			h3 {
+				font-size: $font-size-s;
+				margin-bottom: 16px;
+			}
+			p {
+				font-size: $font-size-s;
+				@include pad-below(){
+			    	text-align: left;
+			    }
+			}
+		}
+	}
+	.customer {
+		display: flex;
+		color: $font-color;
+		flex-direction: column;
+		padding: 0 2% 50px ;
+		@include pad-below(){
+			padding: 0 20px 50px;
+		}
+		h2 {
+			display: flex;
+			font-size: $font-size-xl;
+			justify-content: center;
+			margin-bottom: 32px;
+		}
+		ul {
+			display: flex;
+			@include pad-below(){
+				flex-direction: column;
+			}
+			li {
+				width: 29.3333%;
+				margin: 0 2%;
+				@include pad-below(){
+					width: 100%;
+					margin: 0;
+				}
+				img {
+					border-radius: 50%;
+					float: left;
+				}
+				h3{
+					font-size: $font-size-m;
+					line-height: 67px;
+					margin-left: 80px;
+				}
+				p {
+					font-size: $font-size-s;
+					float: right;
+					margin-left: 80px;
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
+	.booking {
+		background: #f6f4f3;
+		padding: 50px 42px ;
+		@include pad-below(){
+			padding: 50px 20px;
+		}
+		h2 {
+			text-align: center;
+			margin-bottom: 38px;
+			font-size: $font-size-xl;
+			color: $font-color ;
+		}
+		.map {
+			float: left;
+			width: 49%;
+			height: auto;
+			@include pad(){
+				overflow-x: hidden;
+			}
+			@include pad-below(){
+				float: none;
+				width: 100%;		
+				margin-bottom: 30px;
+				overflow-x: scroll;
+			}
+		}
+		form {
+			float: right;
+			font-size: 14px;
+			color: $font-color;
+			width: 49%;
+			position: relative;
+			@include pad-below(){
+				float: none;
+				width: 100%;
+			}
+			input[type="text"]{
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+				background: #FFFFFF;
+				border: 1px solid #CCCCCC;
+				box-shadow: inset 0px 1px 0px 0px #ECECEC;
+				border-radius: 3px;
+				height: 32px;
+				font-size: $font-size-s;
+			}
+			input{
+				margin-bottom: 12px;
+			}
+			.vg {
+				margin-bottom: 45px;
+				div {
+					margin-bottom: 6px;
+				}
+				input,label {
+					display: inline-block;
+				}
+			}
+			.btn {
+				display: block;
+				text-align: right;
+				input[type="submit"]{
+					padding: 6px 20px;
+					background: #F56C23;
+					border-radius: 3px;
+					border: 0;
+					color: #fff;
+				}
+				input[type="submit"]:hover{
+					background: #ca3504;
+					cursor: pointer;
+				}
+				input[type="reset"] {
+					padding: 6px 20px;
+					background: rgba(0,0,0,0.35);
+					border-radius: 3px;
+					border: 0;
+					color: #fff;
+					margin-right: 10px;
+				}
+				input[type="reset"]:hover{
+					background: #6d6b6b;
+					cursor: pointer;
+				}
+			}
+		}
+		@include clearfix;
+	}
+}  
+
+/* index end */

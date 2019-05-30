@@ -1,0 +1,131 @@
+/* register start */
+
+.register {
+	.logo a{
+		background: url(../IMGS/logo_l@svg.svg);
+		width: 243px;
+		height: 48px;
+		display: block;
+		text-indent: 101%;
+		overflow: hidden;
+		white-space: nowrap;
+		margin: 0 auto;
+	}
+	h3 {
+		font-size: $font-size-l;
+		color: $font-color;
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	.content{
+		border-top: 3px #FF5E45 solid;
+		padding: 15px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 620px;
+		margin: 0 auto;
+		box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+		@include iphone(){
+			 width: 90%;
+	    	box-sizing: border-box;
+		}
+		h4 {
+			width: 100%;
+			font-size: $font-size-m;
+			font-weight: bolder;
+			color: $font-color;
+			text-align: center;
+		}
+		.treaty {
+			width: 48%;
+			@include iphone(){
+				width: 100%;
+			}
+			h5 {
+				font-size: $font-size-m;
+				color: $font-color;
+			}
+			p {
+				font-size: 14px;
+				color: $font-color;
+			}
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			width: 48%;
+			@include iphone(){
+				width: 100%;
+			}
+			label {
+				font-size: $font-size-s;
+				color: $font-color;
+				margin: 15px 0 3px;
+				position: relative;
+				#first {
+					position: absolute;
+					top: 34px;
+					left: 10px;
+				}
+				#second {
+					position: absolute;
+					top: 67px;
+					left: 10px;
+				}
+			}
+			#mail, #password {
+				background: #FFFFFF;
+				border: 1px solid #CCCCCC;
+				box-shadow: inset 0px 1px 0px 0px #ECECEC;
+				border-radius: 3px;
+				height: 32px;
+				box-sizing: border-box;
+				text-indent: 30px;
+				outline: 0;
+			}
+			#mail:focus, #password:focus {
+				outline: 1px solid #F56C23;
+			}
+			label[for="mail"]::before {
+				font-family: "Font Awesome 5 Free";
+			    font-size: 14px;
+			    content: "\f0e0";
+			    position: absolute;
+			    top: 34px;
+			    left: 10px;
+			    color: $font-color 50%;
+			    background-color: #fff;
+			}
+			span {
+				margin-bottom: 30px;
+				a {
+					text-decoration: none;
+					color: #FF5E45;
+					font-size: 14px;
+				}
+			}
+			button {
+				background: #F56C23;
+				border-radius: 3px;
+				font-size: 14px;
+				width: 125px;
+				height: 32px;
+				border: 0;
+				align-self: flex-end;
+				a {
+					text-decoration: none;
+					color: #FFFFFF;
+				}
+			}
+			button:hover {
+				cursor: pointer;
+				background: #da3a05;
+			}
+		}
+
+	}
+}
+
+/* register end */

@@ -1,0 +1,218 @@
+.wrap {
+	max-width: 1024px;
+	margin: 0 auto;
+	font-family: Microsoft JhengHei Regular;
+	line-height: 1.5;
+	background: #efe9e7;
+}
+
+/* header start */
+.header {
+	background: url(../IMGS/header_desktop.png);
+	background-position: center center;
+	height: 420px;
+	margin-bottom: 50px;
+	@include iphone(){
+		background: url(../IMGS/header_mobile.png);
+		background-position: 50% center;
+	}
+	.topbar {
+		height: 56px;
+		background: rgba(0,0,0,0.75);
+		position: relative;
+		padding: 0 4%;
+		h1 a {
+			@include hide-text;
+			background: url(../IMGS/logo_w@svg.svg);
+			background-repeat: no-repeat;
+			width: 120px;
+			height: 24px;
+			display: block;
+			position: absolute;
+			top: 16px;
+		}
+		.fa-bars {
+			font-size: $font-size-xl;
+			color: #FFFFFF;
+			float: right;
+			margin-top: 16px;
+			display: none;
+			@include pad-below(){
+				display: block;
+			}
+		}
+		.menu {
+			float: right;
+			display: block;
+			@include pad-below(){
+				max-height: 0;
+				overflow: hidden;
+				position: absolute;
+				top: 56px;
+				width: 100%;
+				float: none;
+				right: 0;
+				transition: 1s;
+			}
+			li {
+				float: left;
+				font-size: $font-size-s;
+				text-align: center;
+				height: 56px;
+				line-height: 56px;
+				padding: 0 16px;
+				@include pad-below(){
+					height: 56px;
+					text-align: center;
+					background: rgba(0,0,0,0.95);
+					line-height: 56px;
+					float: none;
+				}
+				a {
+					text-decoration: none;
+					color: #ffffff;
+					display: block;
+				}
+			}
+			li:hover {
+				background: #2e2d2d;
+			}
+		}
+		
+	}
+	.content {
+		width: 460px;
+		background: rgba(0,0,0,0.35);
+		margin: 67px auto;
+		text-align: center;
+		padding: 20px 0;
+		@include pad-below(){
+			width: 300px;
+			padding: 20px;
+		}
+		@include iphone(){
+			width: 300px;
+			padding: 20px;
+			box-sizing: border-box; 
+		}
+		h2{
+			font-size: $font-size-xxl;
+			color: #fff;
+		}
+		#d-h2{
+			@include pad-below(){
+				display: none;
+			}
+			@include iphone(){
+				display: none;
+			}
+		}
+		#m-h2{
+			display: none;
+			@include pad-below(){
+				display: block;
+				font-size: 32px;
+			}
+			@include iphone(){
+				display: block;
+				font-size: 32px;
+			}
+		}
+		p {
+			font-size: $font-size-s;
+			color: #fff;
+			i {
+				margin: 0 5px;
+			}
+		}	
+	}
+} 
+.menu-show .header .topbar .menu {
+			@include pad-below(){
+				max-height: 224px;
+			}
+		}	
+	
+/* header end */
+/* footer start */
+
+.footer {
+	padding: 50px 42px ;
+	@include clearfix;
+	@include pad(){
+		padding: 50px 10px;
+	}
+	.about{
+		float: left;
+		width: 300px;
+		margin-right: 12px;
+		@include pad(){
+			width: 235px;
+		}
+		@include iphone(){
+			margin-bottom: 30px;
+		}
+		h3 {
+			font-size: $font-size-xl;
+			color: $font-color;
+			margin-bottom: 16px;
+		}
+		p {
+			font-size: $font-size-s;
+			color: $font-color;
+		}
+	}
+	.contact {
+		float: left;
+		@include iphone(){
+			margin-bottom: 30px;
+		}
+		h3 {
+			font-size: $font-size-xl;
+			color: $font-color;
+			margin-bottom: 16px;
+		}
+		li {
+			font-size: $font-size-s;
+			color: $font-color;
+		}
+	}
+	.icon {
+		float: right;
+		.logo {
+			margin-bottom: 30px;
+			a{
+				@include hide-text;
+				background: url(../IMGS/logo_l@svg.svg);
+				background-repeat: no-repeat;
+				width: 243px;
+				height: 48px;
+				display: block;
+			}
+		}
+		.media {
+			i {
+				margin: 0 6px;
+			}
+			i:hover {
+				cursor: pointer;
+			}
+			text-align: right;
+			.fa-google-plus-square{
+				font-size: $font-size-xxl;
+				color: #DB4437;
+			}
+			.fa-twitter-square{
+				font-size: $font-size-xxl;
+				color: #41ABE1;
+			}
+			.fa-facebook-square{
+				font-size: $font-size-xxl;
+				color: #3A5795;
+			}
+		}
+	}
+	
+} 
+
+/* footer end */
